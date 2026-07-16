@@ -1,0 +1,19 @@
+package oopsandinheritence;
+
+import java.util.Optional;
+import java.util.Scanner;
+
+public class Optional2 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String address = sc.nextLine();
+
+        String result = Optional.ofNullable(address)
+                                .filter(s -> !s.isEmpty())
+                                .orElse("India");
+
+        System.out.println(result);
+    }
+}

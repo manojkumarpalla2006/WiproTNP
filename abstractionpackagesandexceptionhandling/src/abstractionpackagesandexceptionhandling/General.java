@@ -1,0 +1,11 @@
+package abstractionpackagesandexceptionhandling;
+
+
+
+public class General extends Compartment {
+
+    @Override
+    public String notice() {
+        return "General Compartment: Open for All Passengers.";
+    }
+}

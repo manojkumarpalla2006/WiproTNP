@@ -1,0 +1,32 @@
+package oopsandinheritence;
+
+import java.util.Optional;
+
+class InvalidEmployeeException extends RuntimeException {
+    InvalidEmployeeException(String msg) {
+        super(msg);
+    }
+}
+
+class Employee {
+    int id;
+    String name;
+
+    Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+
+public class Optional3 {
+    public static void main(String[] args) {
+
+        Employee emp = null;
+
+        Employee e = Optional.ofNullable(emp)
+                .orElseThrow(() ->
+                        new InvalidEmployeeException("Employee is null"));
+
+        System.out.println(e.name);
+    }
+}
